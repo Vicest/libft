@@ -6,9 +6,11 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 19:08:57 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/02/16 19:32:54 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/02/16 23:24:15 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 int	ft_putrstr(const char *s, int c)
 {
