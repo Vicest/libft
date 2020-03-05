@@ -1,14 +1,4 @@
-OBJS = $(patsubst %.c, %.o, $(wildcard ft_str*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_mem*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_is*.c))    \
-	   $(patsubst %.c, %.o, $(wildcard ft_to*.c))    \
-	   $(patsubst %.c, %.o, $(wildcard ft_atoi.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_itoa.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_cal*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_bze*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_put*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_sub*.c))   \
-	   $(patsubst %.c, %.o, $(wildcard ft_spl*.c))   
+OBJS = $(patsubst %.c, %.o, $(wildcard ft_*.c))
 BONUS = $(patsubst %.c, %.o, $(wildcard *_bonus.c))
 
 NAME = libft.a
@@ -18,7 +8,7 @@ AR = ar
 AFLAGS = -rc
 
 .PHONY: all re bonus clean fclean
-all : $(NAME)
+all : $(NAME) clean
 
 $(NAME) : $(OBJS)
 	@$(AR) $(AFLAGS) $(NAME) $(OBJS)

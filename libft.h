@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/02/21 23:27:25 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/03/05 11:01:38 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char				**ft_split(const char *s, char c);
 char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 
+size_t				ft_numdgts(long long n);
+size_t				ft_numdgts_base(long long n, size_t baselen);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 
@@ -68,6 +70,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *c, int fd);
 void				ft_putendl_fd(char *c, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_base_fd(unsigned long long n, char *base, int fd);
 
 int					ft_lstsize(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
