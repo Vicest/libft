@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/02/16 23:23:11 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/02/26 12:29:24 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
+size_t	ft_numdgts(long long n);
+size_t	ft_numdgts_base(long long n, size_t baselen);
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 
@@ -67,6 +69,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *c, int fd);
 void	ft_putendl_fd(char *c, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_base_fd(unsigned long long n, char *base, int fd);
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
