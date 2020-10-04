@@ -6,15 +6,15 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 21:32:16 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/14 21:43:38 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/04 13:25:41 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(long long n, int fd)
 {
-	unsigned int n_pos;
+	unsigned long long n_pos;
 
 	n_pos = n;
 	if (n < 0)

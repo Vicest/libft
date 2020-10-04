@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/03 13:57:01 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/04 13:27:01 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,9 @@ int					ft_putrstr(const char *s, int c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *c, int fd);
 void				ft_putendl_fd(char *c, int fd);
-void				ft_putnbr_fd(int n, int fd);
-void				ft_putnbr_base_fd(unsigned long long n, char *base, int fd);
+void				ft_putnbr_fd(long long n, int fd);
+void				ft_putnbr_base_fd(long long n, char *base, size_t baselen,
+					int fd);
 
 int					ft_lstsize(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
