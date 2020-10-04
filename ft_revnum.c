@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 22:43:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/03 13:56:57 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/04 14:44:35 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** Reverse the order of a number's digits.
 */
 
-unsigned long	t_revnum(unsigned long i)
+unsigned long	ft_revnum(unsigned long i)
 {
 	unsigned	long rev;
 
