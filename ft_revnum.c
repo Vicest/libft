@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 22:43:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/04 14:44:35 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/05 09:38:58 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ unsigned long	ft_revnum(unsigned long i)
 	rev = 0;
 	while (i)
 	{
-		rev *= 10;
-		rev += i % 10;
+		rev = 10 * rev + i % 10;
+		i /= 10;
 	}
 	return rev;
 }
