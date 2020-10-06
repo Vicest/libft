@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 14:02:35 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/04 14:31:17 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/06 11:54:08 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_numdgts_base(long long n, size_t baselen)
 	size_t i;
 	unsigned long long	un;
 
+	if (n == 0)
+		return 1;
 	i = 1;
 	un = n;
 	if(n < 0)
