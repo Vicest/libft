@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/04 13:34:35 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/10/09 13:32:44 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 unsigned long		ft_revnum(unsigned long i);
 int					ft_max(int a, int b);
+int					ft_min(int a, int b);
 
 int					ft_isspace(int c);
 int					ft_isupper(int c);
