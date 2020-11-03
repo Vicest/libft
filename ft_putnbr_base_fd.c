@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 21:32:16 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/10/04 14:32:38 by vicmarti         ###   ########.fr       */
+/*   Updated: 2020/11/03 10:18:17 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_putnbr_base_fd(long long n, char *base, size_t baselen, int fd)
 	}
 	if (n / baselen)
 		ft_putnbr_base_fd(n / baselen, base, baselen, fd);
-	ft_putchar_fd(base[(n % baselen)] , fd);
+	ft_putchar_fd(base[(n % baselen)], fd);
 }
