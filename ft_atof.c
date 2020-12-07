@@ -28,6 +28,7 @@ double	atof(char *a)
 	if (sign == -1)
 		a++;
 	i = 0;
+	f = 0.0;
 	while (ft_isdigit(a[i]))
 	{
 		if (f * 10 < f)
