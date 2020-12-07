@@ -17,7 +17,7 @@
 **	A very basic atof.
 */
 
-double	atof(char *a)
+double	ft_atof(char *a)
 {
 	double	f;
 	int		i;
