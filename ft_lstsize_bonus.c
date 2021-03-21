@@ -6,13 +6,13 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 08:02:12 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/22 11:27:00 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:47:34 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	count;
 

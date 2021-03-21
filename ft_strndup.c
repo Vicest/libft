@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/19 11:17:45 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/21 22:25:27 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 17:21:43 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strndup(const char *s1, size_t n)
 	i = 0;
 	while (s1[i] && n > i)
 		i++;
-	if (!(out = ft_calloc(i + 1, 1)))
+	out = ft_calloc(i + 1, 1);
+	if (!out)
 		return (NULL);
 	out[i] = 0;
 	while (i-- > 0)

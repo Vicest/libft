@@ -6,15 +6,13 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 13:32:30 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/11/03 10:17:24 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:03:53 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**	Output the maximum value of the two given.
-*/
-
-int		ft_max(int a, int b)
+int	ft_max(int a, int b)
 {
-	return (a > b ? a : b);
+	if (a < b)
+		a = b;
+	return (a);
 }

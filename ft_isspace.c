@@ -6,12 +6,12 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 22:17:22 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/19 21:19:11 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:43:44 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isspace(int c)
+int	ft_isspace(int c)
 {
-	return (('\t' <= (unsigned char)c && (unsigned char)c <= '\r') ||
-		(unsigned char)c == ' ');
+	return (('\t' <= (unsigned char)c && (unsigned char)c <= '\r')
+		|| (unsigned char)c == ' ');
 }

@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 10:59:13 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/24 16:29:33 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 17:48:45 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t needle_len;
+	size_t	needle_len;
 
 	if (!*needle)
 		return ((char *)haystack);

@@ -6,15 +6,13 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 13:32:30 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/11/03 10:17:37 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:04:09 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**	Output the minimum value of the two given.
-*/
-
-int		ft_min(int a, int b)
+int	ft_min(int a, int b)
 {
-	return (a < b ? a : b);
+	if (a > b)
+		b = a;
+	return (a);
 }

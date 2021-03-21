@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 23:31:30 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/10 23:38:56 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:00:19 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	return (ft_isupper(c) ? c + 32 : c);
+	if (ft_isupper(c))
+		c += 32;
+	return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/16 19:08:57 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/02/21 23:28:05 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 17:41:00 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putrstr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] && (unsigned char)(s[i]) != c)

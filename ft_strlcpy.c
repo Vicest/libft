@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 04:31:42 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/24 16:40:27 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:57:52 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	if (!dst || !src)
 		return (0);

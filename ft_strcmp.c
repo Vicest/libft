@@ -6,16 +6,23 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 11:23:30 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/21 21:50:52 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:17:25 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 && *s2 && *s1 == *s2)
+	size_t	i;
+	int		diff;
+
+	i = 0;
+	diff = (unsigned char)s1[i] - (unsigned char)s2[i];
+	while (s1[i] && !diff)
 	{
-		s1++;
-		s2++;
+		i++;
+		diff = (unsigned char)s1[i] - (unsigned char)s2[i];
 	}
-	return ((int)((unsigned char)*s1 - (unsigned char)*s2));
+	return (diff);
 }

@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 12:54:40 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/14 14:58:16 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 17:47:10 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		trimlen++;
 	while (trimlen && NULL != ft_strchr(set, *--s1))
 		trimlen--;
-	if (NULL == (trimmed = malloc(trimlen + 1)))
+	trimmed = malloc(trimlen + 1);
+	if (!trimmed)
 		return (trimmed);
 	ft_strlcpy(trimmed, start, trimlen + 1);
 	return (trimmed);

@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/12 03:03:01 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/21 21:24:08 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/21 17:50:55 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static size_t	numl(int n)
 	return (len);
 }
 
-static void		wdigits(char *dst, unsigned int n, size_t ndgts)
+static void	wdigits(char *dst, unsigned int n, size_t ndgts)
 {
 	while (ndgts > 0)
 	{
@@ -38,14 +38,15 @@ static void		wdigits(char *dst, unsigned int n, size_t ndgts)
 	}
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*numstr;
 	size_t	i;
 
 	i = numl(n);
-	if (NULL == (numstr = malloc(i + 1)))
-		return (numstr);
+	numstr = malloc(i + 1);
+	if (!numstr)
+		return (NULL);
 	numstr[i] = 0;
 	if (n < 0)
 	{

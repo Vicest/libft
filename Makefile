@@ -19,15 +19,11 @@ SRCS += ft_memcpy.c
 SRCS += ft_memmove.c
 SRCS += ft_memset.c
 SRCS += ft_min.c
-SRCS += ft_numdgts.c
-SRCS += ft_numdgts_base.c
 SRCS += ft_putchar_fd.c
 SRCS += ft_putendl_fd.c
-SRCS += ft_putnbr_base_fd.c
 SRCS += ft_putnbr_fd.c
 SRCS += ft_putrstr.c
 SRCS += ft_putstr_fd.c
-SRCS += ft_revnum.c
 SRCS += ft_split.c
 SRCS += ft_strchr.c
 SRCS += ft_strcmp.c
@@ -78,9 +74,9 @@ bonus : $(BONUS) $(NAME) libft.h
 $(OBJS) : libft.h
 
 clean :
-	@rm -f $(OBJS) $(BONUS)
+	@rm -v $(OBJS) $(BONUS) $(NAME)
 
 fclean :
-	@rm -f $(NAME)
+	@rm -fv $(OBJS) $(BONUS) $(NAME)
 
 re : clean fclean all
