@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/21 16:31:29 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/22 14:16:17 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,9 @@ char				**ft_split(const char *s, char c);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 
-size_t				ft_numdgts(long long n);
-size_t				ft_numdgts_base(long long n, size_t baselen);
+long				ft_atol(const char *str);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
-unsigned long		ft_revnum(unsigned long i);
 int					ft_max(int a, int b);
 int					ft_min(int a, int b);
 
