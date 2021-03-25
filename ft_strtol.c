@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 11:55:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/23 13:26:42 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/25 16:00:25 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ long	ft_strtol(const char *str, const char *endptr)
 	endptr = str;
 	flag = prefix(endptr);
 	n = 0;
-	while (ft_isdigit(*endptr) && flag & OVFL_B)
+	while (ft_isdigit(*endptr) && !(flag & OVFL_B))
 	{
 		ovf_chk = 10 * n + ('0' + *endptr);
 		endptr++;
