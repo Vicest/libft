@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 11:55:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/26 11:47:54 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/03/26 12:53:49 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #define SIGN_B 1
 #define OVFL_B 2
 
-static char	prefix(const char **iter)
+static char	prefix(char **iter)
 {
 	char	sign_b;
 
@@ -31,18 +31,18 @@ static char	prefix(const char **iter)
 	return (sign_b);
 }
 
-long	ft_strtol(const char *str, const char **endptr)
+long	ft_strtol(const char *str, char **endptr)
 {
-	long	n;
-	long	ovf_chk;
-	char	flag;
+	long		n;
+	long		ovf_chk;
+	char		flag;
 
-	*endptr = str;
+	*endptr = (char *)str;
 	flag = prefix(endptr);
 	n = 0;
 	while (ft_isdigit(**endptr) && !(flag & OVFL_B))
 	{
-		ovf_chk = 10 * n + ('0' + **endptr);
+		ovf_chk = 10 * n + (**endptr - '0');
 			(*endptr)++;
 		if (ovf_chk - (SIGN_B & flag) < n)
 		{
