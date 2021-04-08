@@ -82,4 +82,4 @@ clean :
 fclean :
 	@rm -fv $(OBJS) $(BONUS) $(NAME)
 
-re : clean fclean all
+re : fclean all
