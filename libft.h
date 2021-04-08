@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/26 12:03:38 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/04/08 11:35:00 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char				**ft_split(const char *s, char c);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 
+int					ft_strtoi(const char *str, char **endptr);
 long				ft_strtol(const char *str, char **endptr);
 long				ft_atol(const char *str);
 int					ft_atoi(const char *str);
