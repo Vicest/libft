@@ -90,4 +90,4 @@ fclean :
 	@rm -rfv $(OBJS) $(NAME)
 	@tput sgr0
 
-re : clean fclean all
+re : fclean all
