@@ -87,7 +87,7 @@ bonus : all
 fclean :
 	@echo "Cleaning:"
 	@tput setaf 3
-	@rm -rfv $(OBJS) $(NAME)
+	@rm -rfv $(OBJS) $(NAME) *.dSYM
 	@tput sgr0
 
 re : fclean all
