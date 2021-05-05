@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 14:58:12 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/05/05 15:19:02 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/05/05 15:27:11 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	ft_lstrev(t_list **lst)
 	if (!lst)
 		return ;
 	prev = NULL;
-	next = *lst_next;
+	next = (*lst)->next;
 	while (next)
 	{
-		next = *lst->next;
-		*lst->next = prev;
+		next = (*lst)->next;
+		(*lst)->next = prev;
 		prev = *lst;
 	}
 }
