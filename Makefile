@@ -1,3 +1,6 @@
+VPATH := .
+
+SRCS :=
 SRCS += ft_atof.c
 SRCS += ft_atol.c
 SRCS += ft_atoi.c
@@ -46,18 +49,17 @@ SRCS += ft_substr.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
 
-SRCSB += ft_lstadd_back_bonus.c
-SRCSB += ft_lstadd_front_bonus.c
-SRCSB += ft_lstclear_bonus.c
-SRCSB += ft_lstdelone_bonus.c
-SRCSB += ft_lstiter_bonus.c
-SRCSB += ft_lstlast_bonus.c
-SRCSB += ft_lstmap_bonus.c
-SRCSB += ft_lstnew_bonus.c
-SRCSB += ft_lstsize_bonus.c
+SRCS += ft_lstadd_back.c
+SRCS += ft_lstadd_front.c
+SRCS += ft_lstclear.c
+SRCS += ft_lstdelone.c
+SRCS += ft_lstiter.c
+SRCS += ft_lstlast.c
+SRCS += ft_lstmap.c
+SRCS += ft_lstnew.c
+SRCS += ft_lstsize.c
 
 OBJS = $(patsubst %.c, %.o, $(SRCS))
-BONUS = $(patsubst %.c, %.o, $(SRCSB))
 
 NAME = libft.a
 CC = gcc
@@ -65,21 +67,27 @@ CFLAGS = -O3 -Wall -Werror -Wextra
 AR = ar
 AFLAGS = -rc
 
-.PHONY: all re bonus clean fclean
+.PHONY: all re clean fclean bonus
 all : $(NAME)
 
-$(NAME) : $(OBJS)
-	@$(AR) $(AFLAGS) $(NAME) $(OBJS)
+%.o : %.c
+	@tput setaf 8
+	$(CC) $(CFLAGS) $<  -c -o $@
+	@tput sgr0
 
-bonus : $(BONUS) $(NAME) libft.h
-	@$(AR) $(AFLAGS) $(NAME) $(BONUS)
-#Remember: Implicit rule using CC CFLAGS CPPFLAGS
+$(NAME) : $(OBJS)
+	$(AR) $(AFLAGS) $(NAME) $(OBJS)
+
 $(OBJS) : libft.h
 
-clean :
-	@rm -v $(OBJS) $(BONUS) $(NAME)
+clean : fclean
+
+bonus : all
 
 fclean :
-	@rm -fv $(OBJS) $(BONUS) $(NAME)
+	@echo "Cleaning:"
+	@tput setaf 3
+	@rm -rfv $(OBJS) $(NAME)
+	@tput sgr0
 
 re : clean fclean all
