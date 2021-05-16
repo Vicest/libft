@@ -46,6 +46,7 @@ SRCS += ft_strtrim.c
 SRCS += ft_strtoi.c
 SRCS += ft_strtol.c
 SRCS += ft_substr.c
+SRCS += ft_swap.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
 
