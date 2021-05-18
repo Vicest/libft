@@ -1,5 +1,7 @@
 VPATH := .
 
+MAKEFLAGS += " -j $(shell sysctl -n hw.ncpu)"
+
 SRCS :=
 SRCS += ft_atof.c
 SRCS += ft_atol.c
@@ -92,4 +94,6 @@ fclean :
 	@rm -rfv $(OBJS) $(NAME) *.dSYM
 	@tput sgr0
 
-re : fclean all
+re :
+	@make fclean
+	@make all

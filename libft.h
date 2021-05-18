@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 14:08:32 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/05/05 15:23:24 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/05/18 12:25:47 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ long				ft_strtol(const char *str, char **endptr);
 long				ft_atol(const char *str);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
+int					ft_swap(int *a, int *b);
 int					ft_max(int a, int b);
 int					ft_min(int a, int b);
 
