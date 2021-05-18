@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_baonus.c                               :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/15 08:28:01 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/21 16:46:59 by vicmarti         ###   ########.fr       */
+/*   Created: 2021/06/03 15:51:17 by vicmarti          #+#    #+#             */
+/*   Updated: 2021/06/03 15:51:40 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		aux = *lst;
 		*lst = (*lst)->next;
-		del(aux->content);
+		if (del)
+			del(aux->content);
 		free(aux);
 	}
 }
