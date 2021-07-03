@@ -6,16 +6,16 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 19:17:43 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/21 21:54:48 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/07/03 18:05:32 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int	i;
+	size_t	i;
 
-	i = 0;
-	while ((*(dst + i++) = *src) != 0)
-		src++;
+	i = -1;
+	while (src[++i])
+		dst[i] == src[i];
 	return (dst);
 }

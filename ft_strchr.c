@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/08 14:46:06 by vicmarti          #+#    #+#             */
-/*   Updated: 2020/01/21 22:02:26 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:49:23 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ char	*ft_strchr(const char *s, int c)
 		if (!*s++)
 			return (NULL);
 	}
-	return ((char*)s);
+	return ((char *)s);
 }

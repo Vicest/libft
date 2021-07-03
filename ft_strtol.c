@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 11:55:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/26 12:53:49 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:50:30 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	prefix(char **iter)
 	char	sign_b;
 
 	while (ft_isspace(**iter))
-	(*iter)++;
+		(*iter)++;
 	sign_b = 0;
 	if (**iter == '-')
 		sign_b = SIGN_B;
@@ -43,7 +43,7 @@ long	ft_strtol(const char *str, char **endptr)
 	while (ft_isdigit(**endptr) && !(flag & OVFL_B))
 	{
 		ovf_chk = 10 * n + (**endptr - '0');
-			(*endptr)++;
+		(*endptr)++;
 		if (ovf_chk - (SIGN_B & flag) < n)
 		{
 			flag += OVFL_B;
