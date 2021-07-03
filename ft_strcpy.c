@@ -6,9 +6,11 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 19:17:43 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/07/03 18:05:32 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/07/03 23:25:19 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {
@@ -16,6 +18,6 @@ char	*ft_strcpy(char *dst, const char *src)
 
 	i = -1;
 	while (src[++i])
-		dst[i] == src[i];
+		dst[i] = src[i];
 	return (dst);
 }
