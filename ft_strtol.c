@@ -54,7 +54,7 @@ long	ft_strtol(const char *str, char **endptr)
 			n = ovf_chk;
 	}
 	while (ft_isdigit(**endptr))
-		endptr++;
+		(*endptr)++;
 	if (flag & SIGN_B)
 		n = ~n + 1;
 	return (n);
