@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 12:54:40 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/21 17:47:10 by vicmarti         ###   ########.fr       */
+/*   Created: 2021/10/19 13:17:58 by vicmarti          #+#    #+#             */
+/*   Updated: 2021/10/19 13:18:02 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,25 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*start;
+	const char	*end;
 	char		*trimmed;
-	size_t		trimlen;
 
-	trimlen = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (*s1 && NULL != ft_strchr(set, *s1))
+	start = NULL;
+	end = NULL;
+	while (*s1)
+	{
+		if (!ft_strchr(set, *s1))
+		{
+			end = s1;
+			if (!start)
+				start = s1;
+		}
 		s1++;
-	start = s1;
-	while (*s1++)
-		trimlen++;
-	while (trimlen && NULL != ft_strchr(set, *--s1))
-		trimlen--;
-	trimmed = malloc(trimlen + 1);
-	if (!trimmed)
-		return (trimmed);
-	ft_strlcpy(trimmed, start, trimlen + 1);
+	}
+	trimmed = malloc(sizeof(char) * (end - start + 2));
+	if (trimmed)
+		ft_strlcpy(trimmed, start, end - start + 2);
 	return (trimmed);
 }
