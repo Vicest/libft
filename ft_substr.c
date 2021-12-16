@@ -6,7 +6,7 @@
 /*   By: vicmarti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/11 22:43:03 by vicmarti          #+#    #+#             */
-/*   Updated: 2021/03/21 17:48:01 by vicmarti         ###   ########.fr       */
+/*   Updated: 2021/12/16 11:57:12 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	strlen = 0;
-	while (*s && start--)
+	while (*s && start > 0)
+	{
 		s++;
+		start--;
+	}
 	start = 0;
 	while (s[start++] && len--)
 		strlen++;
